@@ -20,14 +20,7 @@
     </div>
 </template>
 <script>
-import Vue from 'vue'
-import { Button, Form, FormItem, Input } from 'element-ui'
 import { request } from '@/api/axios.js'
-// import { async } from 'q'
-Vue.use(Button)
-Vue.use(Form)
-Vue.use(FormItem)
-Vue.use(Input)
 var _self
 export default {
   name: 'login1',
