@@ -6,8 +6,7 @@ import './assets/css/global.css'
 import '../node_modules/element-ui/lib/theme-chalk/index.css'
 import './assets/css/reset.css'
 import './assets/fonts/iconfont.css'
-import { Message } from 'element-ui'
-Vue.prototype.$message = Message
+import './plugins/element.js'
 Vue.config.productionTip = false
 
 new Vue({
