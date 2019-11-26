@@ -49,6 +49,7 @@
            <el-table-column
             prop="mg_state"
             align="center"
+            width="200"
             label="状态">
               <template slot-scope="scope">
                   <el-switch
@@ -61,16 +62,17 @@
           </el-table-column>
            <el-table-column
             align="center"
+            width="600"
             label="操作">
                 <template slot-scope="scope">
                   <el-tooltip class="item" effect="dark" content="编辑" placement="top" :enterable="false">
-                    <el-button type="primary" icon="el-icon-edit" circle @click="showEditDialog(scope.row.id)"></el-button>
+                    <el-button type="primary" icon="el-icon-edit"  @click="showEditDialog(scope.row.id)">编辑</el-button>
                   </el-tooltip>
                   <el-tooltip class="item" effect="dark" content="删除" placement="top"  :enterable="false">
-                    <el-button type="danger" icon="el-icon-delete" circle  @click="deleteId(scope.row.id)"></el-button>
+                    <el-button type="danger" icon="el-icon-delete"   @click="deleteId(scope.row.id)">删除</el-button>
                   </el-tooltip>
                   <el-tooltip class="item" effect="dark" content="角色分配" placement="top" :enterable="false">
-                    <el-button type="warning" icon="el-icon-setting" circle></el-button>
+                    <el-button type="warning" icon="el-icon-setting" >分配权限</el-button>
                   </el-tooltip>
               </template>
           </el-table-column>
@@ -265,7 +267,6 @@ export default {
             mobile: _self.addForm.mobile
           }
         })
-        console.log(res)
         if (res.meta.status !== 201) return
         _self.addDialogFormVisible = false
         this.getusersList()
